@@ -3,27 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		04AE51DC26CCD25C00174D96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE51DB26CCD25C00174D96 /* AppDelegate.swift */; };
 		04AE51DE26CCD25C00174D96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE51DD26CCD25C00174D96 /* SceneDelegate.swift */; };
-		04AE51E026CCD25C00174D96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE51DF26CCD25C00174D96 /* ViewController.swift */; };
-		04AE51E326CCD25C00174D96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AE51E126CCD25C00174D96 /* Main.storyboard */; };
 		04AE51E526CCD26400174D96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04AE51E426CCD26400174D96 /* Assets.xcassets */; };
 		04AE51E826CCD26400174D96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AE51E626CCD26400174D96 /* LaunchScreen.storyboard */; };
+		04AE51F426CCD62300174D96 /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE51EF26CCD62300174D96 /* LoggedOutRouter.swift */; };
+		04AE51F526CCD62300174D96 /* LoggedOutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AE51F026CCD62300174D96 /* LoggedOutViewController.storyboard */; };
+		04AE51F626CCD62300174D96 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE51F126CCD62300174D96 /* LoggedOutViewController.swift */; };
+		04AE51F726CCD62300174D96 /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE51F226CCD62300174D96 /* LoggedOutBuilder.swift */; };
+		04AE51F826CCD62300174D96 /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE51F326CCD62300174D96 /* LoggedOutInteractor.swift */; };
+		04AE520926CCDF1700174D96 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE520826CCDF1700174D96 /* AppComponent.swift */; };
+		04AE521E26CCF77000174D96 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE521A26CCF77000174D96 /* RootRouter.swift */; };
+		04AE521F26CCF77000174D96 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE521B26CCF77000174D96 /* RootViewController.swift */; };
+		04AE522026CCF77000174D96 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE521C26CCF77000174D96 /* RootBuilder.swift */; };
+		04AE522126CCF77000174D96 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE521D26CCF77000174D96 /* RootInteractor.swift */; };
+		04AE522326CCF7A500174D96 /* RootComponent + LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE522226CCF7A500174D96 /* RootComponent + LoggedOut.swift */; };
+		886827D848E8F4006CB656B3 /* Pods_RIBs_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD1D02918B2786376B4E303 /* Pods_RIBs_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04AE51D826CCD25C00174D96 /* RIBs Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RIBs Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AE51DB26CCD25C00174D96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04AE51DD26CCD25C00174D96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04AE51DF26CCD25C00174D96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04AE51E226CCD25C00174D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04AE51E426CCD26400174D96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04AE51E726CCD26400174D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04AE51E926CCD26400174D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AE51EF26CCD62300174D96 /* LoggedOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
+		04AE51F026CCD62300174D96 /* LoggedOutViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoggedOutViewController.storyboard; sourceTree = "<group>"; };
+		04AE51F126CCD62300174D96 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
+		04AE51F226CCD62300174D96 /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
+		04AE51F326CCD62300174D96 /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
+		04AE520826CCDF1700174D96 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		04AE521A26CCF77000174D96 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		04AE521B26CCF77000174D96 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		04AE521C26CCF77000174D96 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		04AE521D26CCF77000174D96 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		04AE522226CCF7A500174D96 /* RootComponent + LoggedOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent + LoggedOut.swift"; sourceTree = "<group>"; };
+		3DD1D02918B2786376B4E303 /* Pods_RIBs_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RIBs_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45130C68DF45672F8DBB9691 /* Pods-RIBs Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBs Example.debug.xcconfig"; path = "Target Support Files/Pods-RIBs Example/Pods-RIBs Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9BB7D6276308D6440C1379FC /* Pods-RIBs Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBs Example.release.xcconfig"; path = "Target Support Files/Pods-RIBs Example/Pods-RIBs Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886827D848E8F4006CB656B3 /* Pods_RIBs_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +65,8 @@
 			children = (
 				04AE51DA26CCD25C00174D96 /* RIBs Example */,
 				04AE51D926CCD25C00174D96 /* Products */,
+				22CA3435E6CC145A64728B93 /* Pods */,
+				E1F5782F9DEE9B66C6E52106 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +81,65 @@
 		04AE51DA26CCD25C00174D96 /* RIBs Example */ = {
 			isa = PBXGroup;
 			children = (
-				04AE51DB26CCD25C00174D96 /* AppDelegate.swift */,
-				04AE51DD26CCD25C00174D96 /* SceneDelegate.swift */,
-				04AE51DF26CCD25C00174D96 /* ViewController.swift */,
-				04AE51E126CCD25C00174D96 /* Main.storyboard */,
+				04AE520726CCDF0700174D96 /* AppStart */,
+				04AE51FA26CCD86500174D96 /* Root */,
+				04AE51F926CCD63000174D96 /* LoggedOut */,
 				04AE51E426CCD26400174D96 /* Assets.xcassets */,
 				04AE51E626CCD26400174D96 /* LaunchScreen.storyboard */,
 				04AE51E926CCD26400174D96 /* Info.plist */,
 			);
 			path = "RIBs Example";
+			sourceTree = "<group>";
+		};
+		04AE51F926CCD63000174D96 /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				04AE51F026CCD62300174D96 /* LoggedOutViewController.storyboard */,
+				04AE51EF26CCD62300174D96 /* LoggedOutRouter.swift */,
+				04AE51F126CCD62300174D96 /* LoggedOutViewController.swift */,
+				04AE51F226CCD62300174D96 /* LoggedOutBuilder.swift */,
+				04AE51F326CCD62300174D96 /* LoggedOutInteractor.swift */,
+			);
+			path = LoggedOut;
+			sourceTree = "<group>";
+		};
+		04AE51FA26CCD86500174D96 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				04AE521A26CCF77000174D96 /* RootRouter.swift */,
+				04AE521B26CCF77000174D96 /* RootViewController.swift */,
+				04AE521C26CCF77000174D96 /* RootBuilder.swift */,
+				04AE521D26CCF77000174D96 /* RootInteractor.swift */,
+				04AE522226CCF7A500174D96 /* RootComponent + LoggedOut.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		04AE520726CCDF0700174D96 /* AppStart */ = {
+			isa = PBXGroup;
+			children = (
+				04AE51DD26CCD25C00174D96 /* SceneDelegate.swift */,
+				04AE51DB26CCD25C00174D96 /* AppDelegate.swift */,
+				04AE520826CCDF1700174D96 /* AppComponent.swift */,
+			);
+			path = AppStart;
+			sourceTree = "<group>";
+		};
+		22CA3435E6CC145A64728B93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45130C68DF45672F8DBB9691 /* Pods-RIBs Example.debug.xcconfig */,
+				9BB7D6276308D6440C1379FC /* Pods-RIBs Example.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E1F5782F9DEE9B66C6E52106 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DD1D02918B2786376B4E303 /* Pods_RIBs_Example.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04AE51EC26CCD26400174D96 /* Build configuration list for PBXNativeTarget "RIBs Example" */;
 			buildPhases = (
+				9CD90FFC16B858436D2FB119 /* [CP] Check Pods Manifest.lock */,
 				04AE51D426CCD25C00174D96 /* Sources */,
 				04AE51D526CCD25C00174D96 /* Frameworks */,
 				04AE51D626CCD25C00174D96 /* Resources */,
+				4F32048513D1F6786C24EA3C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,34 +203,77 @@
 			files = (
 				04AE51E826CCD26400174D96 /* LaunchScreen.storyboard in Resources */,
 				04AE51E526CCD26400174D96 /* Assets.xcassets in Resources */,
-				04AE51E326CCD25C00174D96 /* Main.storyboard in Resources */,
+				04AE51F526CCD62300174D96 /* LoggedOutViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F32048513D1F6786C24EA3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RIBs Example/Pods-RIBs Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RIBs Example/Pods-RIBs Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RIBs Example/Pods-RIBs Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CD90FFC16B858436D2FB119 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RIBs Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04AE51D426CCD25C00174D96 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04AE51E026CCD25C00174D96 /* ViewController.swift in Sources */,
+				04AE521E26CCF77000174D96 /* RootRouter.swift in Sources */,
 				04AE51DC26CCD25C00174D96 /* AppDelegate.swift in Sources */,
+				04AE522126CCF77000174D96 /* RootInteractor.swift in Sources */,
+				04AE521F26CCF77000174D96 /* RootViewController.swift in Sources */,
+				04AE51F726CCD62300174D96 /* LoggedOutBuilder.swift in Sources */,
 				04AE51DE26CCD25C00174D96 /* SceneDelegate.swift in Sources */,
+				04AE51F426CCD62300174D96 /* LoggedOutRouter.swift in Sources */,
+				04AE520926CCDF1700174D96 /* AppComponent.swift in Sources */,
+				04AE522026CCF77000174D96 /* RootBuilder.swift in Sources */,
+				04AE51F826CCD62300174D96 /* LoggedOutInteractor.swift in Sources */,
+				04AE522326CCF7A500174D96 /* RootComponent + LoggedOut.swift in Sources */,
+				04AE51F626CCD62300174D96 /* LoggedOutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04AE51E126CCD25C00174D96 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04AE51E226CCD25C00174D96 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04AE51E626CCD26400174D96 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +403,7 @@
 		};
 		04AE51ED26CCD26400174D96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45130C68DF45672F8DBB9691 /* Pods-RIBs Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +423,7 @@
 		};
 		04AE51EE26CCD26400174D96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BB7D6276308D6440C1379FC /* Pods-RIBs Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
