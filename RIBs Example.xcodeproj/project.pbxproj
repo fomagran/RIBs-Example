@@ -82,8 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				04AE520726CCDF0700174D96 /* AppStart */,
-				04AE51FA26CCD86500174D96 /* Root */,
-				04AE51F926CCD63000174D96 /* LoggedOut */,
+				04AE522426CCFC4900174D96 /* Tic Tac Toe */,
 				04AE51E426CCD26400174D96 /* Assets.xcassets */,
 				04AE51E626CCD26400174D96 /* LaunchScreen.storyboard */,
 				04AE51E926CCD26400174D96 /* Info.plist */,
@@ -123,6 +122,15 @@
 				04AE520826CCDF1700174D96 /* AppComponent.swift */,
 			);
 			path = AppStart;
+			sourceTree = "<group>";
+		};
+		04AE522426CCFC4900174D96 /* Tic Tac Toe */ = {
+			isa = PBXGroup;
+			children = (
+				04AE51FA26CCD86500174D96 /* Root */,
+				04AE51F926CCD63000174D96 /* LoggedOut */,
+			);
+			path = "Tic Tac Toe";
 			sourceTree = "<group>";
 		};
 		22CA3435E6CC145A64728B93 /* Pods */ = {
