@@ -1,5 +1,5 @@
 //
-//  RootInteractor.swift
+//  LoggedOutInteractor.swift
 //  RIBs Example
 //
 //  Created by Fomagran on 2021/08/18.
@@ -8,27 +8,27 @@
 import RIBs
 import RxSwift
 
-protocol RootRouting: ViewableRouting {
+protocol LoggedOutRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
-protocol RootPresentable: Presentable {
-    var listener: RootPresentableListener? { get set }
+protocol LoggedOutPresentable: Presentable {
+    var listener: LoggedOutPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol RootListener: AnyObject {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+protocol LoggedOutListener: AnyObject {
+    func didLogin(player1Name:String,player2Name:String)
 }
 
-final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable, RootPresentableListener {
-
-    weak var router: RootRouting?
-    weak var listener: RootListener?
+final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
+    
+    weak var router: LoggedOutRouting?
+    weak var listener: LoggedOutListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: RootPresentable) {
+    override init(presenter: LoggedOutPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -42,4 +42,9 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         super.willResignActive()
         // TODO: Pause any business logic.
     }
+    
+    func handleLogin(player1Name: String, player2Name: String) {
+        print(player1Name,player2Name)
+    }
+
 }
