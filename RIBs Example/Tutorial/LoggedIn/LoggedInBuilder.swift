@@ -11,7 +11,7 @@ protocol LoggedInDependency: Dependency {
     var loggedInViewController: LoggedInViewControllable { get }
 }
 
-final class LoggedInComponent: Component<LoggedInDependency> {
+final class LoggedInComponent: Component<LoggedInDependency>,MemoDependency {
 
     fileprivate var loggedInViewController: LoggedInViewControllable {
         return dependency.loggedInViewController
@@ -34,13 +34,11 @@ final class LoggedInBuilder: Builder<LoggedInDependency>, LoggedInBuildable {
         let component = LoggedInComponent(dependency: dependency)
         let interactor = LoggedInInteractor()
         interactor.listener = listener
-
-        let offGameBuilder = OffGameBuilder(dependency: component)
-        let ticTacToeBuilder = TicTacToeBuilder(dependency: component)
+        
+        let memoBuilder = MemoBuilder(dependency: component)
         
         return LoggedInRouter(interactor: interactor,
                               viewController: component.loggedInViewController,
-                              offGameBuilder: offGameBuilder,
-                              tictactoeBuilder:ticTacToeBuilder)
+                              memoBuilder: memoBuilder)
     }
 }

@@ -44,7 +44,7 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
     }
     
     func handleLogin(player1Name: String, player2Name: String) {
-        print(player1Name,player2Name)
+        listener?.didLogin(player1Name: player1Name, player2Name: player2Name)
     }
 
 }
