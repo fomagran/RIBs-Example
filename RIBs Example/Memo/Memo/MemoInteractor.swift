@@ -17,6 +17,7 @@ protocol MemoPresentable: Presentable {
 }
 
 protocol MemoListener: AnyObject {
+    func logout()
 }
 
 final class MemoInteractor: PresentableInteractor<MemoPresentable>, MemoInteractable {
@@ -29,18 +30,23 @@ final class MemoInteractor: PresentableInteractor<MemoPresentable>, MemoInteract
         super.init(presenter: presenter)
         presenter.listener = self
     }
-
+    
     override func didBecomeActive() {
         super.didBecomeActive()
-        memos.accept(getMemoData())
+        getMemoData()
+            .bind(to: memos)
+            .disposeOnDeactivate(interactor: self)
     }
-
+    
     override func willResignActive() {
         super.willResignActive()
     }
     
-    private func getMemoData() -> [Memo] {
-        return MEMO_DATA
+    func getMemoData() -> Observable<[Memo]> {
+        return Observable<[Memo]>.create { observer in
+            observer.onNext(MEMO_DATA)
+            return Disposables.create()
+        }
     }
 }
 
@@ -64,6 +70,6 @@ extension MemoInteractor: MemoPresentableListener {
     }
     
     func logOutButtonDidTap() {
-        
+        listener?.logout()
     }
 }

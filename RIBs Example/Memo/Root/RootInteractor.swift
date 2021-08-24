@@ -10,6 +10,7 @@ import RxSwift
 
 protocol RootRouting: ViewableRouting {
     func routeToLoggedIn()
+    func routeToLoggedOut()
 }
 
 protocol RootPresentable: Presentable {
@@ -22,7 +23,7 @@ protocol RootListener: AnyObject {
 }
 
 final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable, RootPresentableListener {
-    
+ 
     weak var router: RootRouting?
     weak var listener: RootListener?
 
@@ -45,5 +46,9 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     
     func didLogin() {
         router?.routeToLoggedIn()
+    }
+    
+    func logout() {
+        router?.routeToLoggedOut()
     }
 }

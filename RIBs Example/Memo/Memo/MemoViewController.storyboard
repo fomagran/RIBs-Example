@@ -42,12 +42,18 @@
                                                             <state key="normal" title="삭제">
                                                                 <color key="titleColor" red="1" green="0.086274509799999996" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="tapDeleteButton:" destination="kVO-8D-a4U" eventType="touchUpInside" id="nfO-g5-l9o"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yln-Ts-sAl">
                                                             <rect key="frame" x="111.33333333333334" y="0.0" width="39" height="30"/>
                                                             <state key="normal" title="더하기">
                                                                 <color key="titleColor" systemColor="systemOrangeColor"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="tapPlusButton:" destination="kVO-8D-a4U" eventType="touchUpInside" id="LSb-SQ-qbd"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -58,8 +64,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="addButton" destination="Yln-Ts-sAl" id="3se-tW-dRC"/>
                                             <outlet property="deleteButton" destination="cm5-is-n3M" id="Dqh-ot-Uup"/>
+                                            <outlet property="plusButton" destination="Yln-Ts-sAl" id="Qgk-dL-9zL"/>
                                             <outlet property="title" destination="zYk-ni-Rhr" id="GNU-kx-8fQ"/>
                                         </connections>
                                     </tableViewCell>

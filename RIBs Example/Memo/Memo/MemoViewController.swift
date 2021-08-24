@@ -42,20 +42,11 @@ final class MemoViewController: UIViewController, MemoPresentable, MemoViewContr
     }
     
     private func bind() {
-        listener?.memos.bind(to: table.rx.items(cellIdentifier: "MemoTableViewCell")) { (index, memo, cell) in
+        listener?.memos.bind(to: table.rx.items(cellIdentifier: "MemoTableViewCell"))  { [weak self] (index, memo, cell) in
             if let cell = cell as? MemoTableViewCell {
                 cell.title.text = memo.title
-                cell.deleteTap
-                    .subscribe(onNext:{[weak self] _ in
-                        self?.listener?.deleteMemo(index)
-                    })
-                    .disposed(by:cell.disposeBag)
-                
-                cell.addTap
-                    .subscribe(onNext:{ [weak self] _ in
-                        self?.listener?.plusMemo(index)
-                    })
-                    .disposed(by:cell.disposeBag)
+                cell.index = index
+                cell.delegate = self
             }
         }.disposed(by: disposeBag)
         
@@ -64,7 +55,7 @@ final class MemoViewController: UIViewController, MemoPresentable, MemoViewContr
         addButton.rx.tap.subscribe(onNext: { [weak self] _ in
                     self?.listener?.moveToAddMemoButtonDidTap()
                 }).disposed(by: disposeBag)
-        
+
         logoutButton.rx.tap.subscribe(onNext: { [weak self] _ in
                     self?.listener?.logOutButtonDidTap()
                 }).disposed(by: disposeBag)
@@ -75,6 +66,18 @@ final class MemoViewController: UIViewController, MemoPresentable, MemoViewContr
 
 extension MemoViewController:UITableViewDelegate {
     
+}
+
+//MARK:-  MemoTableViewCellDelegate
+
+extension MemoViewController:MemoTableViewCellDelegate {
+    func tapDeleteButton(index:Int) {
+        listener?.deleteMemo(index)
+    }
+
+    func tapPlusButton(index:Int) {
+        listener?.plusMemo(index)
+    }
 }
 
 

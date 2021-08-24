@@ -18,7 +18,7 @@ protocol RootViewControllable: ViewControllable {
 }
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
-
+    
     init(interactor: RootInteractable,
          viewController: RootViewControllable,
          loggedOutBuilder: LoggedOutBuildable,
@@ -42,22 +42,35 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     
     private let loggedInBuilder:LoggedInBuildable
     
-    private var loggedOut: ViewableRouting?
+    private var loggedOutRouting: ViewableRouting?
     
-    private func routeToLoggedOut() {
-        let loggedOut = loggedOutBuilder.build(withListener: interactor)
-        self.loggedOut = loggedOut
-        attachChild(loggedOut)
-        viewController.present(viewController: loggedOut.viewControllable)
+    private var loggedInRouting: LoggedInRouting?
+    
+    func routeToLoggedOut() {
+        if let loggedInRouting = loggedInRouting {
+            detachChild(loggedInRouting)
+            self.loggedInRouting = nil
+        }
+        
+        let loggedOutRouting = loggedOutBuilder.build(withListener: interactor)
+        self.loggedOutRouting = loggedOutRouting
+        attachChild(loggedOutRouting)
+        let navigationController = UINavigationController(root: loggedOutRouting.viewControllable)
+        viewController.present(viewController: navigationController)
     }
     
     func routeToLoggedIn() {
-        if let loggedOut = loggedOut {
-            detachChild(loggedOut)
-            viewController.dismiss(viewController:loggedOut.viewControllable)
-            self.loggedOut = nil
+        if let loggedOutRouting = loggedOutRouting {
+            detachChild(loggedOutRouting)
+            if let navigationController = loggedOutRouting.viewControllable.uiviewController.navigationController {
+                           viewController.dismiss(viewController: navigationController)
+                       } else {
+                           viewController.dismiss(viewController: loggedOutRouting.viewControllable)
+                       }
+            self.loggedOutRouting = nil
         }
         let loggedInRouting = loggedInBuilder.build(withListener: interactor)
+        self.loggedInRouting = loggedInRouting
         attachChild(loggedInRouting)
     }
 }

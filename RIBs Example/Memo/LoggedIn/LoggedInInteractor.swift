@@ -10,11 +10,12 @@ import RxSwift
 
 protocol LoggedInRouting: Routing {
     func cleanupViews()
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToMemosRIB()
+    func detachMemoRIB()
 }
 
 protocol LoggedInListener: AnyObject {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func logout()
 }
 
 final class LoggedInInteractor: Interactor, LoggedInInteractable {
@@ -33,8 +34,11 @@ final class LoggedInInteractor: Interactor, LoggedInInteractable {
 
     override func willResignActive() {
         super.willResignActive()
-
         router?.cleanupViews()
-        // TODO: Pause any business logic.
+    }
+    
+    func logout() {
+        router?.detachMemoRIB()
+        listener?.logout()
     }
 }
