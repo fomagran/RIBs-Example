@@ -9,25 +9,23 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol MemoTableViewCellDelegate:AnyObject {
-    func tapDeleteButton(index:Int)
-    func tapPlusButton(index:Int)
-}
-
 class MemoTableViewCell: UITableViewCell {
     
-    weak var delegate:MemoTableViewCellDelegate?
-    var index:Int = 0
-
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var title: UILabel!
-
-    @IBAction func tapDeleteButton(_ sender: Any) {
-        delegate?.tapDeleteButton(index:index)
-    }
-    @IBAction func tapPlusButton(_ sender: Any) {
-        delegate?.tapPlusButton(index:index)
+    
+    override func prepareForReuse() {
+        disposeBag = DisposeBag()
     }
     
+    var disposeBag:DisposeBag = DisposeBag()
+    
+    var deleteTap : Observable<Void>{
+        return self.deleteButton.rx.tap.asObservable()
+    }
+    
+    var plusTap : Observable<Void>{
+        return self.plusButton.rx.tap.asObservable()
+    }
 }

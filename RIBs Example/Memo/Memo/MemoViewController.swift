@@ -45,8 +45,17 @@ final class MemoViewController: UIViewController, MemoPresentable, MemoViewContr
         listener?.memos.bind(to: table.rx.items(cellIdentifier: "MemoTableViewCell"))  { [weak self] (index, memo, cell) in
             if let cell = cell as? MemoTableViewCell {
                 cell.title.text = memo.title
-                cell.index = index
-                cell.delegate = self
+                cell.deleteTap
+                    .subscribe(onNext:{
+                        self?.listener?.deleteMemo(index)
+                    })
+                    .disposed(by: cell.disposeBag)
+                
+                cell.plusTap
+                    .subscribe(onNext:{
+                        self?.listener?.plusMemo(index)
+                    })
+                    .disposed(by: cell.disposeBag)
             }
         }.disposed(by: disposeBag)
         
@@ -67,18 +76,4 @@ final class MemoViewController: UIViewController, MemoPresentable, MemoViewContr
 extension MemoViewController:UITableViewDelegate {
     
 }
-
-//MARK:-  MemoTableViewCellDelegate
-
-extension MemoViewController:MemoTableViewCellDelegate {
-    func tapDeleteButton(index:Int) {
-        listener?.deleteMemo(index)
-    }
-
-    func tapPlusButton(index:Int) {
-        listener?.plusMemo(index)
-    }
-}
-
-
 
