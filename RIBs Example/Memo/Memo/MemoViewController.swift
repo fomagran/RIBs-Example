@@ -18,7 +18,7 @@ protocol MemoPresentableListener: AnyObject {
     func logOutButtonDidTap()
 }
 
-final class MemoViewController: UIViewController, MemoPresentable, MemoViewControllable {
+final class MemoViewController: UIViewController, MemoPresentable {
         
     @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var logoutButton: UIBarButtonItem!
@@ -76,4 +76,12 @@ final class MemoViewController: UIViewController, MemoPresentable, MemoViewContr
 extension MemoViewController:UITableViewDelegate {
     
 }
+
+// MARK: MemoViewControllable
+
+  extension MemoViewController: MemoViewControllable {
+      func push(viewController: ViewControllable) {
+          self.navigationController?.pushViewController(viewController.uiviewController, animated: true)
+      }
+  }
 

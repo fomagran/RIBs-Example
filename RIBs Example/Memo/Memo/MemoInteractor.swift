@@ -10,6 +10,8 @@ import RxSwift
 import RxCocoa
 
 protocol MemoRouting: ViewableRouting {
+    func moveToAddMemo()
+    func backFromAddMemo()
 }
 
 protocol MemoPresentable: Presentable {
@@ -21,7 +23,7 @@ protocol MemoListener: AnyObject {
 }
 
 final class MemoInteractor: PresentableInteractor<MemoPresentable>, MemoInteractable {
-    
+
     weak var router: MemoRouting?
     weak var listener: MemoListener?
     var memos: BehaviorRelay<[Memo]> = BehaviorRelay.init(value: [])
@@ -66,10 +68,14 @@ extension MemoInteractor: MemoPresentableListener {
     }
     
     func moveToAddMemoButtonDidTap() {
-        
+        router?.moveToAddMemo()
     }
     
     func logOutButtonDidTap() {
         listener?.logout()
+    }
+    
+    func navigationBack() {
+        router?.backFromAddMemo()
     }
 }

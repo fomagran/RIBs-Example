@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0415F51526D4E93200632999 /* AddMemoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415F51026D4E93200632999 /* AddMemoRouter.swift */; };
+		0415F51626D4E93200632999 /* AddMemoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0415F51126D4E93200632999 /* AddMemoViewController.storyboard */; };
+		0415F51726D4E93200632999 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415F51226D4E93200632999 /* AddMemoViewController.swift */; };
+		0415F51826D4E93200632999 /* AddMemoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415F51326D4E93200632999 /* AddMemoBuilder.swift */; };
+		0415F51926D4E93200632999 /* AddMemoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415F51426D4E93200632999 /* AddMemoInteractor.swift */; };
 		0469108326D4888400CBDB12 /* RootComponent + LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469108226D4888400CBDB12 /* RootComponent + LoggedIn.swift */; };
 		0469108726D4889B00CBDB12 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469108426D4889B00CBDB12 /* LoggedInRouter.swift */; };
 		0469108826D4889B00CBDB12 /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469108526D4889B00CBDB12 /* LoggedInBuilder.swift */; };
@@ -41,6 +46,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0415F51026D4E93200632999 /* AddMemoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoRouter.swift; sourceTree = "<group>"; };
+		0415F51126D4E93200632999 /* AddMemoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMemoViewController.storyboard; sourceTree = "<group>"; };
+		0415F51226D4E93200632999 /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
+		0415F51326D4E93200632999 /* AddMemoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoBuilder.swift; sourceTree = "<group>"; };
+		0415F51426D4E93200632999 /* AddMemoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoInteractor.swift; sourceTree = "<group>"; };
 		0469108226D4888400CBDB12 /* RootComponent + LoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent + LoggedIn.swift"; sourceTree = "<group>"; };
 		0469108426D4889B00CBDB12 /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
 		0469108526D4889B00CBDB12 /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
@@ -90,6 +100,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0415F50F26D4E91200632999 /* AddMemo */ = {
+			isa = PBXGroup;
+			children = (
+				0415F51126D4E93200632999 /* AddMemoViewController.storyboard */,
+				0415F51026D4E93200632999 /* AddMemoRouter.swift */,
+				0415F51226D4E93200632999 /* AddMemoViewController.swift */,
+				0415F51326D4E93200632999 /* AddMemoBuilder.swift */,
+				0415F51426D4E93200632999 /* AddMemoInteractor.swift */,
+			);
+			path = AddMemo;
+			sourceTree = "<group>";
+		};
 		0469108126D4884900CBDB12 /* LoggedIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +210,7 @@
 				04AE51F926CCD63000174D96 /* LoggedOut */,
 				0469108126D4884900CBDB12 /* LoggedIn */,
 				0469109326D48DCF00CBDB12 /* Memo */,
+				0415F50F26D4E91200632999 /* AddMemo */,
 				046910A926D4B61D00CBDB12 /* MemoData.swift */,
 				046910A026D4930D00CBDB12 /* StoryboardInstantiate.swift */,
 			);
@@ -270,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0415F51626D4E93200632999 /* AddMemoViewController.storyboard in Resources */,
 				04AE51E826CCD26400174D96 /* LaunchScreen.storyboard in Resources */,
 				0469109A26D48E4100CBDB12 /* MemoViewController.storyboard in Resources */,
 				04AE51E526CCD26400174D96 /* Assets.xcassets in Resources */,
@@ -330,9 +354,11 @@
 				04AE521E26CCF77000174D96 /* RootRouter.swift in Sources */,
 				04AE51DC26CCD25C00174D96 /* AppDelegate.swift in Sources */,
 				046910A526D49FDA00CBDB12 /* Memo.swift in Sources */,
+				0415F51726D4E93200632999 /* AddMemoViewController.swift in Sources */,
 				0469109C26D48E4100CBDB12 /* MemoBuilder.swift in Sources */,
 				046910A726D4A01E00CBDB12 /* MemoTableViewCell.swift in Sources */,
 				04AE522126CCF77000174D96 /* RootInteractor.swift in Sources */,
+				0415F51826D4E93200632999 /* AddMemoBuilder.swift in Sources */,
 				046910AA26D4B61D00CBDB12 /* MemoData.swift in Sources */,
 				046910A326D49D2B00CBDB12 /* Extension + UINavigationController.swift in Sources */,
 				04AE521F26CCF77000174D96 /* RootViewController.swift in Sources */,
@@ -344,6 +370,8 @@
 				0469109B26D48E4100CBDB12 /* MemoViewController.swift in Sources */,
 				0469108926D4889B00CBDB12 /* LoggedInInteractor.swift in Sources */,
 				04AE51DE26CCD25C00174D96 /* SceneDelegate.swift in Sources */,
+				0415F51926D4E93200632999 /* AddMemoInteractor.swift in Sources */,
+				0415F51526D4E93200632999 /* AddMemoRouter.swift in Sources */,
 				04AE51F426CCD62300174D96 /* LoggedOutRouter.swift in Sources */,
 				04AE520926CCDF1700174D96 /* AppComponent.swift in Sources */,
 				0469108726D4889B00CBDB12 /* LoggedInRouter.swift in Sources */,
