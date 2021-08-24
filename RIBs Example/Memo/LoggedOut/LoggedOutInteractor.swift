@@ -18,7 +18,7 @@ protocol LoggedOutPresentable: Presentable {
 }
 
 protocol LoggedOutListener: AnyObject {
-    func didLogin(player1Name:String,player2Name:String)
+    func didLogin()
 }
 
 final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
@@ -43,8 +43,7 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
         // TODO: Pause any business logic.
     }
     
-    func handleLogin(player1Name: String, player2Name: String) {
-        listener?.didLogin(player1Name: player1Name, player2Name: player2Name)
+    func handleLogin() {
+        listener?.didLogin()
     }
-
 }

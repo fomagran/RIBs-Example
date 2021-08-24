@@ -12,7 +12,9 @@ protocol RootPresentableListener: AnyObject {
 }
 
 final class RootViewController: UIViewController, RootPresentable, RootViewControllable {
-
+    
+    let rootLabel:UILabel = UILabel()
+    
     weak var listener: RootPresentableListener?
 
     init() {
@@ -25,13 +27,27 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor.white
+        layout()
+    }
+    
+    func layout() {
+        self.view.backgroundColor = .white
+        rootLabel.text = "여기는 루트립입니다."
+        view.addSubview(rootLabel)
+        rootLabel.translatesAutoresizingMaskIntoConstraints = false
+        rootLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor)
+                    .isActive = true
+        rootLabel.centerYAnchor.constraint(equalTo:view.centerYAnchor)
+                    .isActive = true
     }
 
+
     // MARK: - RootViewControllable
+    
     func present(viewController: ViewControllable) {
-        present(viewController.uiviewController, animated: true, completion: nil)
+        let vc = viewController.uiviewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
     
     func dismiss(viewController: ViewControllable) {

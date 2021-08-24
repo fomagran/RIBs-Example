@@ -1,34 +1,34 @@
 //
-//  MemoInteractor.swift
+//  RootInteractor.swift
 //  RIBs Example
 //
-//  Created by Fomagran on 2021/08/23.
+//  Created by Fomagran on 2021/08/18.
 //
 
 import RIBs
 import RxSwift
 
-protocol MemoRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+protocol RootRouting: ViewableRouting {
+    func routeToLoggedIn()
 }
 
-protocol MemoPresentable: Presentable {
-    var listener: MemoPresentableListener? { get set }
+protocol RootPresentable: Presentable {
+    var listener: RootPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol MemoListener: AnyObject {
+protocol RootListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class MemoInteractor: PresentableInteractor<MemoPresentable>, MemoInteractable, MemoPresentableListener {
-
-    weak var router: MemoRouting?
-    weak var listener: MemoListener?
+final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable, RootPresentableListener {
+    
+    weak var router: RootRouting?
+    weak var listener: RootListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: MemoPresentable) {
+    override init(presenter: RootPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -41,5 +41,9 @@ final class MemoInteractor: PresentableInteractor<MemoPresentable>, MemoInteract
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+    
+    func didLogin() {
+        router?.routeToLoggedIn()
     }
 }

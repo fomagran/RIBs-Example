@@ -1,21 +1,27 @@
 //
 //  LoggedInBuilder.swift
-//  LoggedIn
+//  RIBs Example
 //
-//  Created by Fomagran on 2021/08/19.
+//  Created by Fomagran on 2021/08/24.
 //
 
 import RIBs
 
 protocol LoggedInDependency: Dependency {
-    var loggedInViewController: LoggedInViewControllable { get }
+    // TODO: Make sure to convert the variable into lower-camelcase.
+    var LoggedInViewController: LoggedInViewControllable { get }
+    // TODO: Declare the set of dependencies required by this RIB, but won't be
+    // created by this RIB.
 }
 
-final class LoggedInComponent: Component<LoggedInDependency>,MemoDependency {
+final class LoggedInComponent: Component<LoggedInDependency> {
 
-    fileprivate var loggedInViewController: LoggedInViewControllable {
-        return dependency.loggedInViewController
+    // TODO: Make sure to convert the variable into lower-camelcase.
+    fileprivate var LoggedInViewController: LoggedInViewControllable {
+        return dependency.LoggedInViewController
     }
+
+    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
 
 // MARK: - Builder
@@ -34,11 +40,9 @@ final class LoggedInBuilder: Builder<LoggedInDependency>, LoggedInBuildable {
         let component = LoggedInComponent(dependency: dependency)
         let interactor = LoggedInInteractor()
         interactor.listener = listener
-        
         let memoBuilder = MemoBuilder(dependency: component)
-        
         return LoggedInRouter(interactor: interactor,
-                              viewController: component.loggedInViewController,
-                              memoBuilder: memoBuilder)
+                              viewController: component.LoggedInViewController,
+                              memoBuilder:memoBuilder)
     }
 }

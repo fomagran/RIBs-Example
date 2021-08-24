@@ -42,7 +42,7 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
         
            return RootRouter(interactor: interactor,
                              viewController: viewController,
-                             loggedOutBuilder: loggedOutBuilder
-                             , loggedInBuilder: loggedInBuilder)
+                             loggedOutBuilder: loggedOutBuilder,
+                             loggedInBuilder:loggedInBuilder)
        }
 }

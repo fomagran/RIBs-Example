@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		043DC9EC26D399CE002F2752 /* MemoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DC9E726D399CE002F2752 /* MemoRouter.swift */; };
-		043DC9ED26D399CE002F2752 /* MemoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043DC9E826D399CE002F2752 /* MemoViewController.storyboard */; };
-		043DC9EE26D399CE002F2752 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DC9E926D399CE002F2752 /* MemoViewController.swift */; };
-		043DC9EF26D399CE002F2752 /* MemoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DC9EA26D399CE002F2752 /* MemoBuilder.swift */; };
-		043DC9F026D399CE002F2752 /* MemoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DC9EB26D399CE002F2752 /* MemoInteractor.swift */; };
-		043DC9F226D39BB5002F2752 /* Enum + Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DC9F126D39BB5002F2752 /* Enum + Storyboard.swift */; };
+		0469108326D4888400CBDB12 /* RootComponent + LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469108226D4888400CBDB12 /* RootComponent + LoggedIn.swift */; };
+		0469108726D4889B00CBDB12 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469108426D4889B00CBDB12 /* LoggedInRouter.swift */; };
+		0469108826D4889B00CBDB12 /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469108526D4889B00CBDB12 /* LoggedInBuilder.swift */; };
+		0469108926D4889B00CBDB12 /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469108626D4889B00CBDB12 /* LoggedInInteractor.swift */; };
+		0469109926D48E4100CBDB12 /* MemoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469109426D48E4100CBDB12 /* MemoRouter.swift */; };
+		0469109A26D48E4100CBDB12 /* MemoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0469109526D48E4100CBDB12 /* MemoViewController.storyboard */; };
+		0469109B26D48E4100CBDB12 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469109626D48E4100CBDB12 /* MemoViewController.swift */; };
+		0469109C26D48E4100CBDB12 /* MemoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469109726D48E4100CBDB12 /* MemoBuilder.swift */; };
+		0469109D26D48E4100CBDB12 /* MemoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469109826D48E4100CBDB12 /* MemoInteractor.swift */; };
+		0469109F26D48F4400CBDB12 /* LoggedInComponent + Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469109E26D48F4400CBDB12 /* LoggedInComponent + Memo.swift */; };
+		046910A126D4930D00CBDB12 /* StoryboardInstantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046910A026D4930D00CBDB12 /* StoryboardInstantiate.swift */; };
+		046910A326D49D2B00CBDB12 /* Extension + UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046910A226D49D2B00CBDB12 /* Extension + UINavigationController.swift */; };
+		046910A526D49FDA00CBDB12 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046910A426D49FDA00CBDB12 /* Memo.swift */; };
+		046910A726D4A01E00CBDB12 /* MemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046910A626D4A01E00CBDB12 /* MemoTableViewCell.swift */; };
+		046910AA26D4B61D00CBDB12 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046910A926D4B61D00CBDB12 /* MemoData.swift */; };
 		04AE51DC26CCD25C00174D96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE51DB26CCD25C00174D96 /* AppDelegate.swift */; };
 		04AE51DE26CCD25C00174D96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE51DD26CCD25C00174D96 /* SceneDelegate.swift */; };
 		04AE51E526CCD26400174D96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04AE51E426CCD26400174D96 /* Assets.xcassets */; };
@@ -28,20 +37,25 @@
 		04AE522026CCF77000174D96 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE521C26CCF77000174D96 /* RootBuilder.swift */; };
 		04AE522126CCF77000174D96 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE521D26CCF77000174D96 /* RootInteractor.swift */; };
 		04AE522326CCF7A500174D96 /* RootComponent + LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE522226CCF7A500174D96 /* RootComponent + LoggedOut.swift */; };
-		04C9348E26CE387300CF8EA4 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9348B26CE387300CF8EA4 /* LoggedInRouter.swift */; };
-		04C9348F26CE387300CF8EA4 /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9348C26CE387300CF8EA4 /* LoggedInBuilder.swift */; };
-		04C9349026CE387300CF8EA4 /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9348D26CE387300CF8EA4 /* LoggedInInteractor.swift */; };
-		04C9349426CE3EF300CF8EA4 /* RootComponent + LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9349326CE3EF300CF8EA4 /* RootComponent + LoggedIn.swift */; };
 		886827D848E8F4006CB656B3 /* Pods_RIBs_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD1D02918B2786376B4E303 /* Pods_RIBs_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		043DC9E726D399CE002F2752 /* MemoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoRouter.swift; sourceTree = "<group>"; };
-		043DC9E826D399CE002F2752 /* MemoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemoViewController.storyboard; sourceTree = "<group>"; };
-		043DC9E926D399CE002F2752 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
-		043DC9EA26D399CE002F2752 /* MemoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoBuilder.swift; sourceTree = "<group>"; };
-		043DC9EB26D399CE002F2752 /* MemoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoInteractor.swift; sourceTree = "<group>"; };
-		043DC9F126D39BB5002F2752 /* Enum + Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum + Storyboard.swift"; sourceTree = "<group>"; };
+		0469108226D4888400CBDB12 /* RootComponent + LoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent + LoggedIn.swift"; sourceTree = "<group>"; };
+		0469108426D4889B00CBDB12 /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
+		0469108526D4889B00CBDB12 /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
+		0469108626D4889B00CBDB12 /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
+		0469109426D48E4100CBDB12 /* MemoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoRouter.swift; sourceTree = "<group>"; };
+		0469109526D48E4100CBDB12 /* MemoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemoViewController.storyboard; sourceTree = "<group>"; };
+		0469109626D48E4100CBDB12 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		0469109726D48E4100CBDB12 /* MemoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoBuilder.swift; sourceTree = "<group>"; };
+		0469109826D48E4100CBDB12 /* MemoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoInteractor.swift; sourceTree = "<group>"; };
+		0469109E26D48F4400CBDB12 /* LoggedInComponent + Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggedInComponent + Memo.swift"; sourceTree = "<group>"; };
+		046910A026D4930D00CBDB12 /* StoryboardInstantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiate.swift; sourceTree = "<group>"; };
+		046910A226D49D2B00CBDB12 /* Extension + UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UINavigationController.swift"; sourceTree = "<group>"; };
+		046910A426D49FDA00CBDB12 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		046910A626D4A01E00CBDB12 /* MemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewCell.swift; sourceTree = "<group>"; };
+		046910A926D4B61D00CBDB12 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
 		04AE51D826CCD25C00174D96 /* RIBs Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RIBs Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AE51DB26CCD25C00174D96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04AE51DD26CCD25C00174D96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,10 +73,6 @@
 		04AE521C26CCF77000174D96 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		04AE521D26CCF77000174D96 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		04AE522226CCF7A500174D96 /* RootComponent + LoggedOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent + LoggedOut.swift"; sourceTree = "<group>"; };
-		04C9348B26CE387300CF8EA4 /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
-		04C9348C26CE387300CF8EA4 /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
-		04C9348D26CE387300CF8EA4 /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
-		04C9349326CE3EF300CF8EA4 /* RootComponent + LoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent + LoggedIn.swift"; sourceTree = "<group>"; };
 		3DD1D02918B2786376B4E303 /* Pods_RIBs_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RIBs_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45130C68DF45672F8DBB9691 /* Pods-RIBs Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBs Example.debug.xcconfig"; path = "Target Support Files/Pods-RIBs Example/Pods-RIBs Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9BB7D6276308D6440C1379FC /* Pods-RIBs Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBs Example.release.xcconfig"; path = "Target Support Files/Pods-RIBs Example/Pods-RIBs Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,15 +90,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		043DC9E626D39984002F2752 /* Memo */ = {
+		0469108126D4884900CBDB12 /* LoggedIn */ = {
 			isa = PBXGroup;
 			children = (
-				043DC9E826D399CE002F2752 /* MemoViewController.storyboard */,
-				043DC9E726D399CE002F2752 /* MemoRouter.swift */,
-				043DC9E926D399CE002F2752 /* MemoViewController.swift */,
-				043DC9EA26D399CE002F2752 /* MemoBuilder.swift */,
-				043DC9EB26D399CE002F2752 /* MemoInteractor.swift */,
-				043DC9F126D39BB5002F2752 /* Enum + Storyboard.swift */,
+				0469108426D4889B00CBDB12 /* LoggedInRouter.swift */,
+				0469108526D4889B00CBDB12 /* LoggedInBuilder.swift */,
+				0469108626D4889B00CBDB12 /* LoggedInInteractor.swift */,
+				0469109E26D48F4400CBDB12 /* LoggedInComponent + Memo.swift */,
+				046910A226D49D2B00CBDB12 /* Extension + UINavigationController.swift */,
+			);
+			path = LoggedIn;
+			sourceTree = "<group>";
+		};
+		0469109326D48DCF00CBDB12 /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				0469109526D48E4100CBDB12 /* MemoViewController.storyboard */,
+				0469109426D48E4100CBDB12 /* MemoRouter.swift */,
+				0469109626D48E4100CBDB12 /* MemoViewController.swift */,
+				0469109726D48E4100CBDB12 /* MemoBuilder.swift */,
+				0469109826D48E4100CBDB12 /* MemoInteractor.swift */,
+				046910A426D49FDA00CBDB12 /* Memo.swift */,
+				046910A626D4A01E00CBDB12 /* MemoTableViewCell.swift */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
@@ -114,8 +137,8 @@
 		04AE51DA26CCD25C00174D96 /* RIBs Example */ = {
 			isa = PBXGroup;
 			children = (
-				04C934A326CE457300CF8EA4 /* Tutorial */,
 				04AE520726CCDF0700174D96 /* AppStart */,
+				04C934A326CE457300CF8EA4 /* Memo */,
 				04AE51E426CCD26400174D96 /* Assets.xcassets */,
 				04AE51E626CCD26400174D96 /* LaunchScreen.storyboard */,
 				04AE51E926CCD26400174D96 /* Info.plist */,
@@ -143,7 +166,7 @@
 				04AE521C26CCF77000174D96 /* RootBuilder.swift */,
 				04AE521D26CCF77000174D96 /* RootInteractor.swift */,
 				04AE522226CCF7A500174D96 /* RootComponent + LoggedOut.swift */,
-				04C9349326CE3EF300CF8EA4 /* RootComponent + LoggedIn.swift */,
+				0469108226D4888400CBDB12 /* RootComponent + LoggedIn.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -158,25 +181,17 @@
 			path = AppStart;
 			sourceTree = "<group>";
 		};
-		04C9348A26CE37C600CF8EA4 /* LoggedIn */ = {
-			isa = PBXGroup;
-			children = (
-				04C9348B26CE387300CF8EA4 /* LoggedInRouter.swift */,
-				04C9348C26CE387300CF8EA4 /* LoggedInBuilder.swift */,
-				04C9348D26CE387300CF8EA4 /* LoggedInInteractor.swift */,
-			);
-			path = LoggedIn;
-			sourceTree = "<group>";
-		};
-		04C934A326CE457300CF8EA4 /* Tutorial */ = {
+		04C934A326CE457300CF8EA4 /* Memo */ = {
 			isa = PBXGroup;
 			children = (
 				04AE51FA26CCD86500174D96 /* Root */,
 				04AE51F926CCD63000174D96 /* LoggedOut */,
-				04C9348A26CE37C600CF8EA4 /* LoggedIn */,
-				043DC9E626D39984002F2752 /* Memo */,
+				0469108126D4884900CBDB12 /* LoggedIn */,
+				0469109326D48DCF00CBDB12 /* Memo */,
+				046910A926D4B61D00CBDB12 /* MemoData.swift */,
+				046910A026D4930D00CBDB12 /* StoryboardInstantiate.swift */,
 			);
-			path = Tutorial;
+			path = Memo;
 			sourceTree = "<group>";
 		};
 		22CA3435E6CC145A64728B93 /* Pods */ = {
@@ -256,7 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AE51E826CCD26400174D96 /* LaunchScreen.storyboard in Resources */,
-				043DC9ED26D399CE002F2752 /* MemoViewController.storyboard in Resources */,
+				0469109A26D48E4100CBDB12 /* MemoViewController.storyboard in Resources */,
 				04AE51E526CCD26400174D96 /* Assets.xcassets in Resources */,
 				04AE51F526CCD62300174D96 /* LoggedOutViewController.storyboard in Resources */,
 			);
@@ -311,25 +326,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0469109F26D48F4400CBDB12 /* LoggedInComponent + Memo.swift in Sources */,
 				04AE521E26CCF77000174D96 /* RootRouter.swift in Sources */,
-				04C9349026CE387300CF8EA4 /* LoggedInInteractor.swift in Sources */,
-				043DC9EF26D399CE002F2752 /* MemoBuilder.swift in Sources */,
 				04AE51DC26CCD25C00174D96 /* AppDelegate.swift in Sources */,
+				046910A526D49FDA00CBDB12 /* Memo.swift in Sources */,
+				0469109C26D48E4100CBDB12 /* MemoBuilder.swift in Sources */,
+				046910A726D4A01E00CBDB12 /* MemoTableViewCell.swift in Sources */,
 				04AE522126CCF77000174D96 /* RootInteractor.swift in Sources */,
+				046910AA26D4B61D00CBDB12 /* MemoData.swift in Sources */,
+				046910A326D49D2B00CBDB12 /* Extension + UINavigationController.swift in Sources */,
 				04AE521F26CCF77000174D96 /* RootViewController.swift in Sources */,
-				04C9348F26CE387300CF8EA4 /* LoggedInBuilder.swift in Sources */,
-				04C9349426CE3EF300CF8EA4 /* RootComponent + LoggedIn.swift in Sources */,
-				043DC9EC26D399CE002F2752 /* MemoRouter.swift in Sources */,
-				043DC9EE26D399CE002F2752 /* MemoViewController.swift in Sources */,
-				04C9348E26CE387300CF8EA4 /* LoggedInRouter.swift in Sources */,
+				0469108826D4889B00CBDB12 /* LoggedInBuilder.swift in Sources */,
 				04AE51F726CCD62300174D96 /* LoggedOutBuilder.swift in Sources */,
+				0469108326D4888400CBDB12 /* RootComponent + LoggedIn.swift in Sources */,
+				046910A126D4930D00CBDB12 /* StoryboardInstantiate.swift in Sources */,
+				0469109926D48E4100CBDB12 /* MemoRouter.swift in Sources */,
+				0469109B26D48E4100CBDB12 /* MemoViewController.swift in Sources */,
+				0469108926D4889B00CBDB12 /* LoggedInInteractor.swift in Sources */,
 				04AE51DE26CCD25C00174D96 /* SceneDelegate.swift in Sources */,
 				04AE51F426CCD62300174D96 /* LoggedOutRouter.swift in Sources */,
 				04AE520926CCDF1700174D96 /* AppComponent.swift in Sources */,
+				0469108726D4889B00CBDB12 /* LoggedInRouter.swift in Sources */,
 				04AE522026CCF77000174D96 /* RootBuilder.swift in Sources */,
-				043DC9F026D399CE002F2752 /* MemoInteractor.swift in Sources */,
+				0469109D26D48E4100CBDB12 /* MemoInteractor.swift in Sources */,
 				04AE51F826CCD62300174D96 /* LoggedOutInteractor.swift in Sources */,
-				043DC9F226D39BB5002F2752 /* Enum + Storyboard.swift in Sources */,
 				04AE522326CCF7A500174D96 /* RootComponent + LoggedOut.swift in Sources */,
 				04AE51F626CCD62300174D96 /* LoggedOutViewController.swift in Sources */,
 			);

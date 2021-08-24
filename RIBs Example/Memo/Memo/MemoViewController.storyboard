@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vKn-9P-Ny8">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="GzV-lN-fg7">
+            <objects>
+                <viewController id="vKn-9P-Ny8" customClass="MemoViewController" customModule="RIBs_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BNZ-bO-rhc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ipg-y6-bdj">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemoTableViewCell" id="kVO-8D-a4U" customClass="MemoTableViewCell" customModule="RIBs_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kVO-8D-a4U" id="hTi-oo-o1p">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Vi-sv-iUF">
+                                                    <rect key="frame" x="120.00000000000001" y="7" width="150.33333333333337" height="30"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYk-ni-Rhr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm5-is-n3M">
+                                                            <rect key="frame" x="61.333333333333343" y="0.0" width="30" height="30"/>
+                                                            <state key="normal" title="삭제">
+                                                                <color key="titleColor" red="1" green="0.086274509799999996" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yln-Ts-sAl">
+                                                            <rect key="frame" x="111.33333333333334" y="0.0" width="39" height="30"/>
+                                                            <state key="normal" title="더하기">
+                                                                <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0Vi-sv-iUF" firstAttribute="centerY" secondItem="hTi-oo-o1p" secondAttribute="centerY" id="CSC-MX-gMD"/>
+                                                <constraint firstItem="0Vi-sv-iUF" firstAttribute="centerX" secondItem="hTi-oo-o1p" secondAttribute="centerX" id="cjk-el-3pp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addButton" destination="Yln-Ts-sAl" id="3se-tW-dRC"/>
+                                            <outlet property="deleteButton" destination="cm5-is-n3M" id="Dqh-ot-Uup"/>
+                                            <outlet property="title" destination="zYk-ni-Rhr" id="GNU-kx-8fQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HgA-Aw-ocO"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HgA-Aw-ocO" firstAttribute="trailing" secondItem="Ipg-y6-bdj" secondAttribute="trailing" id="3fN-Ed-Vxt"/>
+                            <constraint firstItem="Ipg-y6-bdj" firstAttribute="top" secondItem="HgA-Aw-ocO" secondAttribute="top" id="BcM-U6-xP4"/>
+                            <constraint firstItem="Ipg-y6-bdj" firstAttribute="leading" secondItem="HgA-Aw-ocO" secondAttribute="leading" id="d5p-R3-M40"/>
+                            <constraint firstItem="HgA-Aw-ocO" firstAttribute="bottom" secondItem="Ipg-y6-bdj" secondAttribute="bottom" id="r2o-4A-X5D"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Mc4-0L-ege">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="add" id="r5j-fh-sNT"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="9d9-My-YxJ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="r5j-fh-sNT" id="Ciy-9R-XbK"/>
+                        <outlet property="logoutButton" destination="9d9-My-YxJ" id="3Z1-gA-ohw"/>
+                        <outlet property="table" destination="Ipg-y6-bdj" id="WiZ-vJ-2iq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0X-am-vwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1172.3076923076924" y="204.739336492891"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

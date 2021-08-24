@@ -2,7 +2,7 @@
 //  MemoBuilder.swift
 //  RIBs Example
 //
-//  Created by Fomagran on 2021/08/23.
+//  Created by Fomagran on 2021/08/24.
 //
 
 import RIBs
@@ -13,7 +13,7 @@ protocol MemoDependency: Dependency {
 }
 
 final class MemoComponent: Component<MemoDependency> {
-    
+
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
 

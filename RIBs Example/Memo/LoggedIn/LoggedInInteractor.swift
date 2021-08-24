@@ -1,8 +1,8 @@
 //
 //  LoggedInInteractor.swift
-//  LoggedIn
+//  RIBs Example
 //
-//  Created by Fomagran on 2021/08/19.
+//  Created by Fomagran on 2021/08/24.
 //
 
 import RIBs
@@ -10,6 +10,7 @@ import RxSwift
 
 protocol LoggedInRouting: Routing {
     func cleanupViews()
+    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
 protocol LoggedInListener: AnyObject {
