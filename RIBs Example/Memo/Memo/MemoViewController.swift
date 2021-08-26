@@ -25,7 +25,6 @@ final class MemoViewController: UIViewController, MemoPresentable {
     @IBOutlet weak var table: UITableView!
     
     weak var listener: MemoPresentableListener?
-    var memos:[Memo] = [Memo(title: "하이"),Memo(title: "헬로"),Memo(title: "영훈")]
     let disposeBag:DisposeBag = DisposeBag()
     
     static func instantiate() -> Self {
@@ -44,12 +43,13 @@ final class MemoViewController: UIViewController, MemoPresentable {
     private func bind() {
         listener?.memos.bind(to: table.rx.items(cellIdentifier: "MemoTableViewCell"))  { [weak self] (index, memo, cell) in
             if let cell = cell as? MemoTableViewCell {
-                cell.title.text = memo.title
+                cell.number.text = "\(memo.number)"
                 cell.deleteTap
                     .subscribe(onNext:{
                         self?.listener?.deleteMemo(index)
                     })
                     .disposed(by: cell.disposeBag)
+                
                 
                 cell.plusTap
                     .subscribe(onNext:{
@@ -58,8 +58,6 @@ final class MemoViewController: UIViewController, MemoPresentable {
                     .disposed(by: cell.disposeBag)
             }
         }.disposed(by: disposeBag)
-        
-        table.rx.setDelegate(self).disposed(by: disposeBag)
         
         addButton.rx.tap.subscribe(onNext: { [weak self] _ in
                     self?.listener?.moveToAddMemoButtonDidTap()
@@ -71,11 +69,6 @@ final class MemoViewController: UIViewController, MemoPresentable {
     }
 }
 
-//MARK:- UITableViewDelegate
-
-extension MemoViewController:UITableViewDelegate {
-    
-}
 
 // MARK: MemoViewControllable
 

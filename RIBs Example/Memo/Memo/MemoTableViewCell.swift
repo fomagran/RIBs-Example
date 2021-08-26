@@ -13,7 +13,8 @@ class MemoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var number: UILabel!
+    
     
     override func prepareForReuse() {
         disposeBag = DisposeBag()

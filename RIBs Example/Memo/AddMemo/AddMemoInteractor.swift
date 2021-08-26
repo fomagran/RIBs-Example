@@ -18,10 +18,11 @@ protocol AddMemoPresentable: Presentable {
 }
 
 protocol AddMemoListener: AnyObject {
+    func addMemo(number:Int)
     func navigationBack()
 }
 
-final class AddMemoInteractor: PresentableInteractor<AddMemoPresentable>, AddMemoInteractable, AddMemoPresentableListener {
+final class AddMemoInteractor: PresentableInteractor<AddMemoPresentable>, AddMemoInteractable {
     
     weak var router: AddMemoRouting?
     weak var listener: AddMemoListener?
@@ -40,10 +41,17 @@ final class AddMemoInteractor: PresentableInteractor<AddMemoPresentable>, AddMem
     
     override func willResignActive() {
         super.willResignActive()
-        // TODO: Pause any business logic.
     }
     
     func navigationBackDidTap() {
         listener?.navigationBack()
+    }
+}
+
+//MARK:- AddMemoPresentableListener
+
+extension AddMemoInteractor: AddMemoPresentableListener {
+    func addMemo(number: Int) {
+        listener?.addMemo(number: number)
     }
 }

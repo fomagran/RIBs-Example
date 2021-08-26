@@ -30,6 +30,7 @@ final class MemoRouter: ViewableRouter<MemoInteractable, MemoViewControllable>, 
     
     func moveToAddMemo() {
         let addMemoRouting = addMemoBuilder.build(withListener: interactor)
+        self.addMemoRouting = addMemoRouting
         attachChild(addMemoRouting)
         viewController.push(viewController: addMemoRouting.viewControllable)
     }

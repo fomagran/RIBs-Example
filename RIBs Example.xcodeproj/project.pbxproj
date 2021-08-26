@@ -128,12 +128,12 @@
 			isa = PBXGroup;
 			children = (
 				0469109526D48E4100CBDB12 /* MemoViewController.storyboard */,
-				0469109426D48E4100CBDB12 /* MemoRouter.swift */,
 				0469109626D48E4100CBDB12 /* MemoViewController.swift */,
+				0469109426D48E4100CBDB12 /* MemoRouter.swift */,
 				0469109726D48E4100CBDB12 /* MemoBuilder.swift */,
 				0469109826D48E4100CBDB12 /* MemoInteractor.swift */,
-				046910A426D49FDA00CBDB12 /* Memo.swift */,
 				046910A626D4A01E00CBDB12 /* MemoTableViewCell.swift */,
+				046910A426D49FDA00CBDB12 /* Memo.swift */,
 			);
 			path = Memo;
 			sourceTree = "<group>";

@@ -31,7 +31,7 @@ final class AddMemoBuilder: Builder<AddMemoDependency>, AddMemoBuildable {
 
     func build(withListener listener: AddMemoListener) -> AddMemoRouting {
         let component = AddMemoComponent(dependency: dependency)
-        let viewController = AddMemoViewController()
+        let viewController = AddMemoViewController.instantiate()
         let interactor = AddMemoInteractor(presenter: viewController)
         interactor.listener = listener
         return AddMemoRouter(interactor: interactor, viewController: viewController)

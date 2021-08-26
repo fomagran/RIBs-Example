@@ -50,9 +50,16 @@ final class MemoInteractor: PresentableInteractor<MemoPresentable>, MemoInteract
             return Disposables.create()
         }
     }
+    
+    func addMemo(number: Int) {
+        var newMemos = memos.value
+        newMemos.append(Memo(number: number))
+        memos.accept(newMemos)
+    }
 }
 
 // MARK: MemosPresentableListener
+
 extension MemoInteractor: MemoPresentableListener {
     
     func deleteMemo(_ index:Int) {
@@ -63,7 +70,7 @@ extension MemoInteractor: MemoPresentableListener {
     
     func plusMemo(_ index: Int) {
         var newMemos = memos.value
-        newMemos[index] = Memo(title: String(Int(newMemos[index].title)! + 1))
+        newMemos[index] = Memo(number:newMemos[index].number + 1)
         memos.accept(newMemos)
     }
     
